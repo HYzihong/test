@@ -1,0 +1,370 @@
+/* 主页的样式表 */
+/* 中间索引栏+轮播图+登陆框 */
+.grid
+{
+    height: 480px;
+
+}
+/* 索引栏目部分 */
+.grid-col1
+{
+    width: 190px;
+    height: 100%;
+    /* 给 / 字体一样的大小 */
+    font-size: 14px;
+    color: #626262;
+    background-color: #fff;
+    box-shadow: 0px -1px 3px rgba(0, 0,0, .3);
+    position: relative;
+}
+.grid-col1 a
+{
+    font-size: 14px;
+    color: #626262;
+    margin:0 3px;
+}
+.grid-col1 a:hover
+{
+    color: #f10215;
+}
+.grid-col1 .grid-col1-advertising
+{
+    position: absolute;
+    width: 250px;
+    height: 480px;
+    background-color: #e47f7f;
+    top: 0px;
+    right:190px;
+}
+.grid-col1-advertising:hover .grid-col1-advertisingend
+{
+    width: 800px;
+}
+.grid-col1 .grid-col1-advertisingend
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0; 
+    height: 480px;
+    background-color: violet;
+    z-index: 999;
+    /* display: none; */
+    transition: all 1s;
+}
+.grid-col1 ul
+{
+    padding: 10px 0;
+
+}
+.grid-col1 ul li
+{
+    padding-left: 18px;
+    height: 26px;
+    line-height: 26px;
+    /* margin-left:12px 会导致hover显示出错 */
+
+}
+.grid-col1 ul li:hover
+{
+    background-color: #e3e4e5;
+}
+/* 轮播图部分 */
+.grid-col2
+{
+    width: 590px;
+    height: 480px;
+    background-color: aqua;
+    margin-left: 15px;
+    position: relative;
+}
+.arrow-l,.arrow-r
+{
+    position: absolute;
+    /* 实现居中(且靠左边)效果
+    top: 50%;
+    transform: translateY(-50%);
+    */
+    top: 45%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, .3);
+    color: rgba(255, 255, 255, .6);
+
+}
+.arrow-l,.arrow-r a:hover
+{
+    opacity: .7;
+    color: rgba(255, 255, 255, .6);
+}
+
+.arrow-r
+{
+    right: 0;
+}
+.circle
+{
+    width: 175px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, .6);
+    position: absolute;
+    left: 15%;
+    bottom: 20px;
+    /* transform: rotateX(-50%); */
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.circle li
+{
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    float: left;
+    margin: 4px;
+    cursor: pointer;
+    /* 鼠标经过->显示小手 */
+
+}
+.circle .current
+/* 加强权重 */
+{
+    background-color: #f10215;
+}
+/* 广告部分 */
+.grid-col3
+{
+    width: 150px;
+    height: 100%;
+    margin-left: 10px;
+    
+}
+.grid-col3-advertising
+{
+    width: 190px;
+    height: 150px;
+    padding-bottom: 15px;
+}
+.grid-col3-advertising img
+{
+    width: 100%;
+    height: 100%;
+    
+}
+.grid-col3-advertising img:hover
+{
+    opacity: .7;
+    
+}
+/* 最右边的部分 */
+.grid-col4
+{
+    width: 190px;
+    height: 100%;
+    /* background-color: aqua; */
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.login
+{
+    height: 78px;
+    /* 140-62 */
+    /* border-bottom: 1px solid #ccc; */
+    background-color:#fff;
+    padding-top: 62px;
+    position: relative;
+}
+.login-t 
+{
+    border: 5px solid #e3e1df;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 3px 6px 25px #c3c3c3;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    margin-left: -34px;
+}
+.login-t img,.login-t
+{
+    display: block;
+    width: 55px;
+    height: 55px;
+}
+.login-m  
+{
+    padding: 0 10px;
+}
+.login-m  p
+{
+    line-height: 20px;
+    width: 100%;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    /* 超出的部分显示省略号 */
+    overflow: hidden;
+        /* 溢出隐藏 */
+    white-space: nowrap;
+    /* 强制在一行内显示 */
+    color: #888;
+    text-align: center;
+}
+.login-b
+{
+    margin-top: 10px;
+    height: 25px;
+    font-size: 0;
+    text-align: center;
+}
+.login-b-newsuser
+{
+    display: inline-block;
+    margin: 0 5px;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    text-align: center;
+    color: #e43f3b;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    -webkit-box-shadow: 6px 8px 20px rgba(45,45,45,.15);
+    -moz-box-shadow: 6px 8px 20px rgba(45,45,45,.15);
+    box-shadow: 6px 8px 20px rgba(45,45,45,.15);
+    /* -webkit-transition: background .3s ease,color .3s ease;
+    -o-transition: background .3s ease,color .3s ease;
+    -moz-transition: background .3s ease,color .3s ease;
+    transition: background .3s ease,color .3s ease; */
+}
+.login-b-member
+{
+    background: #363634;
+    color: #e5d790;
+}
+.news
+{
+    height: 130px;
+    /* border-bottom: 1px solid #bea68d; */
+    background:#fff;
+}
+.new-title
+{
+    padding-top: 8px;
+    position: relative;
+    line-height: 13px;
+    /* font-size: 13px; */
+}
+.new-title h5
+{
+    
+    margin-left: 15px;
+    font-size: 13px;
+    color: #1e1e1e;
+    /* display: inline-block; */
+}
+.new-title a
+{
+    position: absolute;
+    top: 7px;
+    left: 150px;
+    font-size: 13px;
+}
+.new-title a:hover
+{
+    color: #1e1e1e;
+}
+.new-body
+{
+    padding-top: 8px;
+    margin: 0 15px;
+}
+.news-tag
+{
+    background-color: #e47f7f;
+    margin-right: 6px;
+    color: #fff;
+    border-radius: 1px;
+    height: 16px;
+    width: 35px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    display: inline-block;
+    /* span设置宽度高度必须是在display->block的情况下 */
+}
+.news-tag:hover
+{
+    color: #fff;
+}
+.new-body ul
+{
+    line-height: 21px;
+
+}
+.new-body li
+{
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    /* 超出的部分显示省略号 */
+    overflow: hidden;
+        /* 溢出隐藏 */
+    white-space: nowrap;
+    /* 强制在一行内显示 */
+    color: #1e1e1e;
+}
+.line
+{
+    height: 1px;
+    /* padding: 0 10px; */
+    margin: 0 10px;
+    /* background: #bea68d; */
+    
+    background: #ebeaea;
+}
+.expand
+{
+    height: 209px;
+    background-color: #fff;
+}
+.expend-button
+{
+    overflow: hidden;
+    padding: 18px 11px 0 11px;
+    /* 上右下左 */
+    /* background-color: #1e1e1e; */
+}
+.expend-button li
+{
+    width: 42px;
+    height: 57px;
+    /* background-color: yellowgreen; */
+    text-align: center;
+    padding-top: 2px;
+    float: right;
+}
+.expend-button li a
+{
+    display: block;
+    padding-top: 6px;
+}
+.expend-button li i
+{
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 4px auto 0;
+    background-color: #bea68d;
+}
+.expend-button li span
+{
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 2px solid #fff;
+    color: #bea68d;
+}
+
